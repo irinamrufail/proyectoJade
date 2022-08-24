@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GRID GENERAL*/
+.grilla{
+    background-color:#f7eec1;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: .4fr 1fr 1fr .4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header "
+                        "menu main main"
+                        "menu main main"
+                        "pie pie pie";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu{
+    grid-area: menu;
+    justify-self: left;
+    background-color: #d98e04;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display:initial;
+	position: sticky;
+	top: 0px;
+    font-size: 0.5cm;
+}
+
+.header{
+    grid-area: header;
+    background-color: #d98e04;
+}
+
+/* Estilos lista */
+ul{
+    list-style-type: none;
+}
+
+ul li a:link, a:visited, a:active{
+    list-style: none;
+    text-decoration: none;
+}
+
+.estiloLista li {
+	padding: 10px;
+	margin: 5px;
+}
+
+/* Estilos titulo */
+.titulo{
+    color: white;
+    font-size: xx-large;
+    font-family: satisfy;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtituloHeader{
+    color: white;
+    font-family: satisfy;
+    text-align: center;
+    font-size:medium;
+}
+.subtitulos{
+    font-family: satisfy;
+    text-align:left;
+}
+
+.subtitulosGeneral{
+    font-family: satisfy;
+    text-align:center;
+}
+
+/* PIE */
+.pie{
+    grid-area: pie;
+    background-color: #ca8505;;
+}
+
+/* GRILLA PAG SOBRE NOSOTROS */
+.grillaSobreNos{
+    display: grid;
+    grid-template-columns: 100vh;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-template-areas: "subtituloSobreNos"
+                        "tarjeta1"
+                        " tarjeta2"
+                        "tarjeta3"
+                        " tarjeta4";
+}
+
+.tarjeta{
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    width: 85%;
+    height: 250px;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ca8505;
+    border-radius: 15px;
+}
+
+.subtituloSobreNos{
+    grid-area: subtituloSobreNos;
+    margin-top: 20px;
+}
+
+.estiloSubSobreNos{
+    text-align: center;
+    margin:auto;
+    font-family: satisfy;
+}
+
+.tarjeta1{
+    grid-area: tarjeta1;
+}
+
+.tarjeta2{
+    grid-area: tarjeta2;
+}
+
+.tarjeta3{
+    grid-area: tarjeta3;
+}
+
+.tarjeta4{
+    grid-area: tarjeta4;
+}
+
+@media only screen and (max-width: 1024px) {
+    .grilla{
+        background-color:#f7eec1;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: .4fr 1fr 1fr .4fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "header header"
+                            "menu main"
+                            "menu main"
+                            "pie pie pie";
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .grilla{
+        grid-template-rows: .4fr 1fr 1fr .4fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                            "nav "
+                             "main"
+                            "pie";
+    }
+}
